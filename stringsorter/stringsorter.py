@@ -54,8 +54,13 @@ def caller(unsorted_list: list = None, asc: bool = True) -> list:
         list: Sorted list
     """
     unsorted_list = input("List strings separated by a comma \n").replace(" ","").split(",")
-    asc = bool(input("Ascending? True/False \n"))
     
+    asc_input = input("Ascending? True/False \n")
+    if asc_input == "True":
+        asc = True
+    else:
+        asc = False
+
     sorted_list = stringsorter(unsorted_list)
 
     if asc is False:
